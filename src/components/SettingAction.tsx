@@ -1,8 +1,8 @@
 import { Accessor, createSignal, JSXElement, Setter, Show } from "solid-js"
-import type { Setting } from "./Generator"
 import { toJpeg } from "html-to-image"
 import { copyToClipboard, dateFormat } from "~/utils"
 import type { ChatMessage } from "~/types"
+import type { Setting } from "~/system"
 
 export default function SettingAction(props: {
   setting: Accessor<Setting>
@@ -121,7 +121,9 @@ export default function SettingAction(props: {
               setTimeout(() => setCopied(false), 1000)
             }}
             icon={
-              copied() ? "i-ri:check-fill text-yellow" : "i-ri:markdown-line"
+              copied()
+                ? "i-ri:check-fill dark:text-yellow text-yellow-6"
+                : "i-ri:markdown-line"
             }
           />
           <ActionItem

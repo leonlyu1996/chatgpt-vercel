@@ -25,6 +25,10 @@ html {
   color: var(--c-fg);
 }
 
+header {
+  background-color: var(--c-bg);
+}
+
 html.dark {
   --c-bg: #16161a;
   --c-scroll-thumb: #4c4c4c;
@@ -45,3 +49,22 @@ main {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+// https://www.zhangxinxu.com/wordpress/2015/01/css-page-scrollbar-toggle-center-no-jumping/
+/* html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+} */
